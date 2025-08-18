@@ -67,7 +67,7 @@ function generateCategoryMenu(categories) {
   const allBtn = document.createElement('button');
   allBtn.textContent = 'Tous';
   allBtn.classList.add('category-btn','active');
-  allBtn.addEventListener('click', () => fetchProjects());
+  
   menu.appendChild(allBtn);
 
   // Boutons par catégorie
@@ -75,9 +75,7 @@ function generateCategoryMenu(categories) {
     const btn = document.createElement('button');
     btn.textContent = category.name;
     btn.classList.add('category-btn');
-    btn.addEventListener('click', () => {
-      fetchProjects(category.name);
-    });
+    
     menu.appendChild(btn);
   });
 
